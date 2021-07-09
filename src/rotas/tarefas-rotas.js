@@ -8,6 +8,7 @@ const rotaTarefasPost = (app) => {
     res.send(
       "Rota POST de tarefas ativada: tarefas adicionada ao banco de dados",
     );
+    console.log(req.body);
   });
 };
 

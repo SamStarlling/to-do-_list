@@ -4,6 +4,8 @@ const rotaUsuario = require("./rotas/usuario-rotas");
 const rotaTarefas = require("./rotas/tarefas-rotas");
 const port = 3011;
 
+app.use(express.json());
+
 rotaUsuario.rotaUsuarioGet(app);
 rotaUsuario.rotaUsuarioPost(app);
 rotaTarefas.rotaTarefasGet(app);
@@ -16,6 +18,6 @@ app.post("/", (req, res) => {
   res.send("Rota ativada com POST");
 });
 
-app.listen(port, () => {
+app.listen(port, (res) => {
   console.log("Servidor rodando: " + port);
 });

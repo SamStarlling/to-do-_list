@@ -8,6 +8,7 @@ const rotaUsuarioPost = (app) => {
     res.send(
       "Rota POST de usuário ativada: usuário adicionado ao banco de dados",
     );
+    console.log(req.body);
   });
 };
 
